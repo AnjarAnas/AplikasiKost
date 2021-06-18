@@ -82,7 +82,7 @@ The above copyright notice and this permission notice shall be included in all c
                         <label  class="bmd-label-floating">Kontak</label>
                         <input type="text" name="kontak" class="form-control" >
                     </div>
-                    <input type="submit" value="Tambah" class="btn btn-md btn-primary">
+                    <button type="submit" value="Tambah" class="btn btn-md btn-primary col-md-12">Masukan</button>
                 </form>
                 </div>
               </div>
@@ -96,15 +96,16 @@ The above copyright notice and this permission notice shall be included in all c
                 <div class="card-body">
                   <form action="/carivendor" method="post">
                     {{ csrf_field() }}
+                    
                     <div class="row">
-                      <div class="col-md-9">
+                      <div class="col-8">
                         <div class="form-group mb-3">
                           <label  class="bmd-label-floating">Cari Vendor</label>
                           <input type="text" name="cari" class="form-control" >
                         </div>
                       </div>
-                      <div class="col-md-3">
-                        <input type="submit" value="Cari" class="btn btn-primary btn-md">
+                      <div class="col-3">
+                        <button type="submit" value="Cari" class="btn btn-primary btn-md">Cari</button>
                       </div>
                     </div>
                   </form>

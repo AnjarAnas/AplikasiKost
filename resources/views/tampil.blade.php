@@ -77,33 +77,59 @@ The above copyright notice and this permission notice shall be included in all c
                                     {{$message}}
                                 </div>
                                 @enderror
-                                <table>
+                                {{-- <div class="row">
+                                    <label for="formFile" class="form-label mt-3 mr-3 ml-3 mb-3">Upload File To Import Database</label>
+                                </div>
+                                <div class="row">
                                     <form action="/import" method="post" enctype="multipart/form-data">
-                                        {{csrf_field()}}
-                                        <label for="formFile" class="form-label mt-3 mr-3 ml-3 mb-3">Upload File To Import Database</label>
-                                        <tr>
-                                            <td class="col-3">
+                                    <div class="col-md-8">
+                                       
+                                            {{csrf_field()}}
+                                            
                                                 <div class="mb-3 ml-3 ">
 
                                                     <input class="form-control" name="file" type="file" id="formFile">
                                                 </div>
-                                            </td>
+                                            
+                                        
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="mr-3">
+                                            <button type="submit" value="Import" class="btn btn-md btn-primary">Import</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                </div> --}}
+                                <label for="formFile" class="form-label mt-3 mr-3 ml-3 mb-3">Upload File To Import Database</label>
+                                <table>  
+                                    <tr>
+                                        <form action="/import" method="post"  enctype="multipart/form-data">
+                                            {{csrf_field()}}
                                             <td>
-                                                <div class="mr-3">
-                                                    <input type="submit" value="Import" class="btn btn-md btn-primary">
+                                                <div class="mb-3 ml-3 ">
+                                                    <input class="form-control"name="file" type="file" id="formFile">
                                                 </div>
                                             </td>
-                                        </tr>
-                                    </form>
+                                            <td>
+                                                <div class="ml-3 mr-4">
+                                                    <button type="submit"  class="btn btn-primary btn-md col-md-10">Import</button>
+                                                </div>
+                                            </td>
+                                        </form>
+                                    </tr>
+                                    
                                     <tr>
                                         <form action="/caridata" method="post">
                                             {{ csrf_field() }}
-                                            <td><div class="form-group ml-4 mr-3">
+                                            <td><div class="form-group ml-3 mr-3">
                                                 <label class="bmd-label-floating">Cari Data</label>
                                                 <input type="text" name="cari" class="form-control">
                                             </div></td>
                                             <td>
-                                                <input type="submit" value="Cari" class="btn btn-primary btn-md">
+                                                <div class="ml-3 mr-4">
+                                                    <button type="submit" value="Cari" class="btn btn-primary btn-md col-md-10">Cari</button>
+                                                </div>
+                                                
                                             </td>
                                         </form>
                                     </tr>
